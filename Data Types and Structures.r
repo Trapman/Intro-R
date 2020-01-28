@@ -1,6 +1,6 @@
 # DATA TYPES #############################
 
-# Numberic
+# Numeric
 
 n1 <- 15  #returns 15
 n2 <- 1.5 #returns 1.5
@@ -91,12 +91,16 @@ list2 <- list(a1, a2, a3, list1)   # lists within lists
 
 ## Coerce Character to Numeric ##################################
 (coerce4 <- c("1", "2", "3"))
+typeof(coerce4) # returns character
 
 (coerce5 <- as.numeric(c("1", "2", "3")))
+typeof(coerce5) # returns numeric
 
 ## Coerce Matrix to Data Frame ##################################
 
 (coerce6 <- matrix(1:9, nrow  = 3))
-
+is.matrix(coerce6) # returns True
+            
 (coerce7 <- as.data.frame(matrix(1:9, nrow = 3)))
+is.data.frame(coerce7) # returns True
 
