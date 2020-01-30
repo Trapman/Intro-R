@@ -30,7 +30,10 @@ hc <- df %>% # Get data
   hclust # Computer hierarchical cluster
   
 # Plot dendragram   (this is just the plot of the clusters)
-hc %>% plot(labels ~ dfstate_code)
+hc %>% plot(labels = dfstate_code)
 
 # Draw boxes around clusters
-hc %>% rect.hcluster(k = 2, border = "gray80")
+hc %>% rect.hcluster(k = 2, border = "gray80") # 2 boxes
+hc %>% rect.hcluster(k = 3, border = "gray80") # 3 boxes
+hc %>% rect.hcluster(k = 4, border = "gray80") # 4 boxes
+
